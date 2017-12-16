@@ -33,7 +33,8 @@ end
 
 def hit?
   prompt_user
-  case get_user_input
+  user_input = get_user_input
+  case user_input
   when "h"
     card_total += deal_card
   when "s"
