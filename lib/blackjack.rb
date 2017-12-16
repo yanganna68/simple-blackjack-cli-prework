@@ -15,7 +15,7 @@ def prompt_user
 end
 
 def get_user_input
-  input = gets
+  gets.chomp
 end
 
 def end_game
@@ -23,9 +23,10 @@ def end_game
 end
 
 def initial_round
-  deal_card
-  deal_card
-  display_card_total(card_total)
+  card_total = 0
+  2.times do
+    card_total += deal_card
+  end
 end
 
 def hit?
