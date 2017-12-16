@@ -32,7 +32,15 @@ def initial_round
 end
 
 def hit?
-  # code hit? here
+  prompt_user
+  case get_user_input
+  when "h"
+    card_total += deal_card
+  when "s"
+    card_total
+  else
+    invalid_command
+  end
 end
 
 def invalid_command
